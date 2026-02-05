@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Music Player – Stream & Like Songs</title>
+    <meta
+      name="description"
+      content="A modern web-based music player to stream songs, like tracks, and enjoy seamless playback with playlists and controls."
+    />
+    <meta
+      name="keywords"
+      content="music player, online music, web music app, songs playlist, liked songs"
+    />
+    <meta name="author" content="Mansi Zanjale" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="search-area">
+          <input type="text" class="search" placeholder="Search..." />
+
+          <!-- Language Dropdown as Cards -->
+          <div class="lang-wrapper tooltip-wrapper" style="position: relative">
+            <span id="langBtn" style="cursor: pointer">🌐</span>
+            <span class="tooltip-text">Language Selector</span>
+
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-option" data-lang="All">All Languages</div>
+              <div class="lang-option" data-lang="English">English</div>
+              <div class="lang-option" data-lang="Hindi">Hindi</div>
+              <div class="lang-option" data-lang="Marathi">Marathi</div>
+              <div class="lang-option" data-lang="Korean">Korean</div>
+              <div class="lang-option" data-lang="Japanese">Japanese</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="icons">
+          <div class="tooltip-wrapper">
+            <span id="shuffleBtn">🔀</span>
+            <span class="tooltip-text">Shuffle</span>
+          </div>
+
+          <div
+            class="headphone-wrapper tooltip-wrapper"
+            style="position: relative"
+          >
+            <span id="headphoneBtn" style="cursor: pointer">🎧</span>
+            <span class="tooltip-text">Mood Selector</span>
+
+            <!-- Mood Dropdown as Mood Cards -->
+            <div class="mood-dropdown" id="moodDropdown">
+              <div class="mood-option" data-mood="All">All</div>
+              <div class="mood-option" data-mood="Chill">🌸Chill</div>
+              <div class="mood-option" data-mood="Workout">⚡Workout</div>
+              <div class="mood-option" data-mood="Fun">🎉Fun</div>
+              <div class="mood-option" data-mood="Emotional">🥀Emotional</div>
+              <div class="mood-option" data-mood="Romantic">💗Romantic</div>
+              <div class="mood-option" data-mood="Night">🌙Night</div>
+            </div>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <a href="likes.html">❤️</a>
+            <span class="tooltip-text">Likes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAYLIST (JS WILL FILL THIS) -->
+      <div class="playlist"></div>
+
+      <!-- NOW PLAYING -->
+      <div class="now-playing">
+        <img class="cover" loading="lazy" alt="song cover" />
+
+        <div class="song-details">
+          <strong>Song Name</strong>
+          <small>Artist</small>
+
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+
+          <div class="time">
+            <span class="current-time">0:00</span>
+            <span class="total-time">0:00</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="tooltip-wrapper">
+            <button class="rep">♾️</button>
+            <span class="tooltip-text">Repeat</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="prev">⏮</button>
+            <span class="tooltip-text">Previous (<-)</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="play">▶︎</button>
+            <span class="tooltip-text">Play/Pause (Space)</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="next">⏭</button>
+            <span class="tooltip-text">Next (->)</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="Like">🤍</button>
+            <span class="tooltip-text">Like</span>
+          </div>
+        </div>
+      </div>
+      <div class="volume-control">
+        <div class="tooltip-wrapper">
+          <span id="muteBtn">🔊</span>
+          <span class="tooltip-text">volume</span>
+        </div>
+        <input type="range" id="volumeSlider" min="0" max="100" value="100" />
+        <span id="volumeValue">100%</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

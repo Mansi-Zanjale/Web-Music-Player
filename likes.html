@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liked Songs ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player">
+      <div class="top-bar">
+        <h1>❤️ Liked Songs</h1>
+        <a href="index.html">⬅ Back</a>
+      </div>
+
+      <div class="playlist" id="likedPlaylist"></div>
+
+      <!-- NOW PLAYING -->
+      <div class="now-playing">
+        <img class="cover" loading="lazy" alt="song cover" />
+
+        <div class="song-details">
+          <strong>Song Name</strong>
+          <small>Artist</small>
+
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+
+          <div class="time">
+            <span class="current-time">0:00</span>
+            <span class="total-time">0:00</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="tooltip-wrapper">
+            <button class="prev">⏮</button>
+            <span class="tooltip-text">Previous (<-)</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="play">▶︎</button>
+            <span class="tooltip-text">Play/Pause (Space)</span>
+          </div>
+
+          <div class="tooltip-wrapper">
+            <button class="next">⏭</button>
+            <span class="tooltip-text">Next (->)</span>
+          </div>
+        </div>
+      </div>
+      <div class="volume-control">
+        <div class="tooltip-wrapper">
+          <span id="muteBtn">🔊</span>
+          <span class="tooltip-text">volume</span>
+        </div>
+        <input type="range" id="volumeSlider" min="0" max="100" value="100" />
+        <span id="volumeValue">100%</span>
+      </div>
+    </div>
+
+    <script src="likes.js"></script>
+  </body>
+</html>
